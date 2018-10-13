@@ -32,11 +32,11 @@ public class SelectActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
-                    case (R.id.radioButtonSen0)
+                    case R.id.radioButtonSen0
                         puntuacionSen = 0;
                         break;
-                    case (R.id.radioButtonSen1)
-                        puntuacionSen = 1:
+                    case R.id.radioButtonSen1
+                        puntuacionSen = 1;
                         break;
                 }
             }
@@ -46,10 +46,10 @@ public class SelectActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
-                    case (R.id.radioButtonCos0)
+                    case R.id.radioButtonCos0
                         puntuacionCos = 1;
                         break;
-                    case (R.id.radioButtonCos1)
+                    case R.id.radioButtonCos1
                         puntuacionCos = 0;
                         break;
                 }
@@ -60,10 +60,10 @@ public class SelectActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
-                    case (R.id.radioButtonTan0)
+                    case R.id.radioButtonTan0
                         puntuacionTan = 1;
                         break;
-                    case (R.id.radioButtonTan1)
+                    case R.id.radioButtonTan1
                         puntuacionTan = 0;
                         break;
                 }
