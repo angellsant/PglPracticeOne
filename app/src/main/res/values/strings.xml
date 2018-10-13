@@ -6,4 +6,5 @@
     <string name="cos_value">Cos 60</string>
     <string name="tan_value">Tan 90</string>
     <string name="button_text_resolution">MOSTRAR RESULTADOS</string>
+    <string name="title_activity_result">Resultado del Test</string>
 </resources>

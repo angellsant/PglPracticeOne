@@ -1,8 +1,11 @@
 package com.example.luis.myandroidapplicationone;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioGroup;
 
 public class SelectActivity extends AppCompatActivity {
@@ -23,6 +26,7 @@ public class SelectActivity extends AppCompatActivity {
         RadioGroup radioGroupSen = (RadioGroup) findViewById(R.id.radioGroupSen);
         RadioGroup radioGroupCos = (RadioGroup) findViewById(R.id.radioGroupCos);
         RadioGroup radioGroupTan = (RadioGroup) findViewById(R.id.radioGroupTan);
+        Button buttonResult = (Button) findViewById(R.id.buttonShowResult);
 
         radioGroupSen.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -66,5 +70,15 @@ public class SelectActivity extends AppCompatActivity {
             }
         });
 
+        buttonResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentShowResult = new Intent(context, ResultActivity.class);
+                intentShowResult.putExtra("noteSen", puntuacionSen);
+                intentShowResult.putExtra("noteCos", puntuacionCos);
+                intentShowResult.putExtra("noteTan", puntuacionTan);
+                startActivity(intentShowResult);
+            }
+        });
     }
 }
