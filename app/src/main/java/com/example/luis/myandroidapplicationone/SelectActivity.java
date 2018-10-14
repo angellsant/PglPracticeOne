@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 public class SelectActivity extends AppCompatActivity {
 
     Activity context;
 
-    Integer  noteSen = 0;
-    Integer  noteCos = 0;
-    Integer  noteTan = 0;
+    Integer  noteSen, noteCos, noteTan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,10 @@ public class SelectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select);
 
         context = this;
+
+        noteSen = 0;
+        noteCos = 1;
+        noteTan = 1;
 
         RadioGroup radioGroupSen = (RadioGroup) findViewById(R.id.radioGroupSen);
         RadioGroup radioGroupCos = (RadioGroup) findViewById(R.id.radioGroupCos);
@@ -40,6 +43,7 @@ public class SelectActivity extends AppCompatActivity {
                             noteSen = 1;
                         break;
                 }
+
             }
         });
 
@@ -74,11 +78,16 @@ public class SelectActivity extends AppCompatActivity {
         buttonResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent intentShowResult = new Intent(context, ResultActivity.class);
-                intentShowResult.putExtra("noteSen", noteSen);
-                intentShowResult.putExtra("noteCos",  noteCos);
-                intentShowResult.putExtra("noteTan",  noteTan);
+                intentShowResult.putExtra("noteSen", noteSen.toString());
+                intentShowResult.putExtra( "noteCos", noteCos.toString());
+                intentShowResult.putExtra( "noteTan", noteTan.toString());
                 startActivity(intentShowResult);
+
+
+
             }
         });
     }

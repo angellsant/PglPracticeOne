@@ -8,8 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResultActivity extends AppCompatActivity {
+
+    //  Integer endNote = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +33,19 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent intentResult = this.getIntent();
         String notesSen = intentResult.getExtras().getString("noteSen");
+        String notesCos = intentResult.getExtras().getString("noteCos");
+        String notesTan = intentResult.getExtras().getString("noteTan");
 
+        //notesSen *=2;
+        //notesCos *=2;
+        //notesTan *=2;
+
+        String endNote = notesSen+ "-" + notesCos+"-"+ notesTan;
 
         TextView textViewResult = (TextView) findViewById(R.id.textViewFinalResult);
-        textViewResult.setText(notesSen);
+        textViewResult.setText(endNote);
 
+        Toast.makeText(getApplicationContext(),"Pulsado: " + endNote, Toast.LENGTH_SHORT).show();
     }
 
 }
