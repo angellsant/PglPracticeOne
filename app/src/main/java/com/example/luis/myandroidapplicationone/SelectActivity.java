@@ -112,7 +112,7 @@ public class SelectActivity extends AppCompatActivity {
                 Integer noteEndOne, noteEndTwo;
 
                 noteEndOne = (noteSen+noteCos+noteTan)*2;
-                noteEndTwo = (int)(noteCheckSen+noteCheckCos+noteCheckTan);
+                noteEndTwo = (int)Math.round((noteCheckSen+noteCheckCos+noteCheckTan));
 
                 Intent intentShowResult = new Intent(context, ResultActivity.class);
                 intentShowResult.putExtra("noteQuestionOne",noteEndOne);

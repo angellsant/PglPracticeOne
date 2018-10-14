@@ -21,14 +21,14 @@ public class ResultActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
 
         Intent intentResult = this.getIntent();
@@ -37,7 +37,7 @@ public class ResultActivity extends AppCompatActivity {
 
         Integer endNote = noteForQuestionOne+noteForQuestionTwo;
 
-        String finalText = "Resultado: " + endNote.toString();
+        String finalText = String.format("Puntuación del Test: %s", endNote.toString());
 
         TextView textViewResult = (TextView) findViewById(R.id.textViewFinalResult);
         textViewResult.setText(finalText);

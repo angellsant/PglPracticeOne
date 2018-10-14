@@ -18,18 +18,20 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".SelectActivity">
+        <activity android:name=".SelectActivity">
             <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
         </activity>
 
-        <activity
-            android:name=".ResultActivity"
+        <activity android:name=".ResultActivity"
             android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".SelectActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SelectActivity" />
+
         </activity>
 
     </application>
