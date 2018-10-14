@@ -7,4 +7,10 @@
     <string name="tan_value">Tan 90</string>
     <string name="button_text_resolution">MOSTRAR RESULTADOS</string>
     <string name="title_activity_result">Resultado del Test</string>
+    <string name="message_continue">Pulsar para continuar</string>
+    <string name="title_activity_select">TEST MATEMÁTICO</string>
+    <string name="title_question_one_A">Sen 90</string>
+    <string name="title_question_one_B">Cos 90</string>
+    <string name="title_question_one_C">Tan 0</string>
+    <string name="title_question_two">Resultado de la Función: 1/2</string>
 </resources>

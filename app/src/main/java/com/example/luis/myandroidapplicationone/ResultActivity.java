@@ -32,20 +32,16 @@ public class ResultActivity extends AppCompatActivity {
 
 
         Intent intentResult = this.getIntent();
-        String notesSen = intentResult.getExtras().getString("noteSen");
-        Integer notesCos = intentResult.getExtras().getInt("noteCos");
-        Integer notesTan = intentResult.getExtras().getInt("noteTan");
+        Integer noteForQuestionOne = intentResult.getExtras().getInt("noteQuestionOne");
+        Integer noteForQuestionTwo = intentResult.getExtras().getInt("noteQuestionTwo");
 
-        //notesSen *=2;
-        //notesCos *=2;
-        //notesTan *=2;
+        Integer endNote = noteForQuestionOne+noteForQuestionTwo;
 
-        String endNote = notesSen+ "-" + notesCos.toString()+"-"+ notesTan.toString();
+        String finalText = "Resultado: " + endNote.toString();
 
         TextView textViewResult = (TextView) findViewById(R.id.textViewFinalResult);
-        textViewResult.setText(endNote);
+        textViewResult.setText(finalText);
 
-        Toast.makeText(getApplicationContext(),"Pulsado: " + endNote, Toast.LENGTH_SHORT).show();
     }
 
 }
