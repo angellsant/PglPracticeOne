@@ -33,14 +33,14 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent intentResult = this.getIntent();
         String notesSen = intentResult.getExtras().getString("noteSen");
-        String notesCos = intentResult.getExtras().getString("noteCos");
-        String notesTan = intentResult.getExtras().getString("noteTan");
+        Integer notesCos = intentResult.getExtras().getInt("noteCos");
+        Integer notesTan = intentResult.getExtras().getInt("noteTan");
 
         //notesSen *=2;
         //notesCos *=2;
         //notesTan *=2;
 
-        String endNote = notesSen+ "-" + notesCos+"-"+ notesTan;
+        String endNote = notesSen+ "-" + notesCos.toString()+"-"+ notesTan.toString();
 
         TextView textViewResult = (TextView) findViewById(R.id.textViewFinalResult);
         textViewResult.setText(endNote);

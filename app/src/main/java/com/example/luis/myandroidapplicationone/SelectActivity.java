@@ -82,8 +82,8 @@ public class SelectActivity extends AppCompatActivity {
 
                 Intent intentShowResult = new Intent(context, ResultActivity.class);
                 intentShowResult.putExtra("noteSen", noteSen.toString());
-                intentShowResult.putExtra( "noteCos", noteCos.toString());
-                intentShowResult.putExtra( "noteTan", noteTan.toString());
+                intentShowResult.putExtra( "noteCos", noteCos);
+                intentShowResult.putExtra( "noteTan", noteTan);
                 startActivity(intentShowResult);
 
 
